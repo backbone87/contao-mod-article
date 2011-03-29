@@ -1,0 +1,19 @@
+=== Titel
+Module: Article
+
+
+=== Suchbegriffe
+insert,article,insert-tag
+
+
+=== Teaser
+Wraps an article into a module, to embed it into a page layout. Fixes problems
+caused by the common practice with Insert-Tags.
+
+
+=== Beschreibung
+<p>Should work in older version of Contao/TYPOlight, too.</p>
+
+
+=== Freigabe-Notizen und Änderungs-Log
+    

@@ -1,0 +1,19 @@
+=== Titel
+Modul: Artikel
+
+
+=== Suchbegriffe
+insert,artikel,layout,insert-tag
+
+
+=== Teaser
+Verpackt einen Artikel als Modul um es im Seitenlayout einzubinden. Behebt
+Probleme der üblichen Vorgehensweise mit InsertTags.
+
+
+=== Beschreibung
+<p>Sollte auch in älteren Contao/TYPOlight-Versionen laufen.</p>
+
+
+=== Freigabe-Notizen und Änderungs-Log
+    
