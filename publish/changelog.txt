@@ -1,8 +1,13 @@
 h1. Changelog
 
+h2. 1.0.2
+
+* 1 *Feature*: Added the option to additionally output the article container
+
+
 h2. 1.0.1
 
-* 1 Added the option to exclude the module from the Contao website search
+* 1 *Feature*: Added the option to exclude the module from the Contao website search
 
 
 h2. 1.0.0

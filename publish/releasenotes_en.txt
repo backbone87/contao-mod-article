@@ -16,4 +16,7 @@ caused by the common practice with Insert-Tags.
 
 
 === Freigabe-Notizen und Änderungs-Log
-    
+<p>see manual link</p>
+
+=== Handbuch-Link
+http://www.contao-forge.org/projects/backboneitmodarticle/wiki
