@@ -1,5 +1,5 @@
 === Titel
-Module: Article
+Article modules
 
 
 === Suchbegriffe
@@ -7,16 +7,28 @@ insert,article,insert-tag
 
 
 === Teaser
-Wraps an article into a module, to embed it into a page layout. Fixes problems
-caused by the common practice with Insert-Tags.
+Various modules to display articles in a way so that problems that occur
+when using Insert-Tags are avoided.
 
 
 === Beschreibung
+<p>The main purpose of this modules is to integrate easy-to-edit content within
+layouts.</p>
+
+<h3>Module: Article</h3>
+<p>Wraps an article into a module, to embed it into a page layout. Fixes problems
+caused by the common practice with Insert-Tags.</p>
+
+<h3>Module: Page articles</h3>
+<p>Displays the articles of a particular page and optionally of particular
+columns.</p>
+
 <p>Should work in older version of Contao/TYPOlight, too.</p>
 
 
 === Freigabe-Notizen und Änderungs-Log
 <p>see manual link</p>
+
 
 === Handbuch-Link
 http://www.contao-forge.org/projects/backboneitmodarticle/wiki

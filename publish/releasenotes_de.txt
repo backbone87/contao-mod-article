@@ -1,5 +1,5 @@
 === Titel
-Modul: Artikel
+Artikelmodule
 
 
 === Suchbegriffe
@@ -7,17 +7,34 @@ insert,artikel,layout,insert-tag
 
 
 === Teaser
-Verpackt einen Artikel als Modul um es im Seitenlayout einzubinden. Behebt
-Probleme der üblichen Vorgehensweise mit InsertTags.
+Verschiedene Module um Artikel darzustellen. Behebt Probleme die bei der sonst
+üblichen Methode mit InsertTags auftreten.
 
 
 === Beschreibung
+<p>Die Hauptanwendung dieser Module liegt darin, Inhalte die auf allen Seiten
+eines Layouts angezeigt werden, einfach in der Artikelverwaltung einer
+"Container"-Seite pflegen zu können.</p>
+
+<h3>Modul: Artikel</h3>
+<p>Verpackt einen Artikel als Modul um es im Seitenlayout einzubinden. Behebt
+Probleme der üblichen Vorgehensweise mit InsertTags.</p>
+
+<h3>Modul: Seitenartikel</h3>
+<p>Zeigt die Artikel einer bestimmten Seite an. Die anzuzeigenden Artikel können
+auch nach ihrem Layoutbereich gefiltert werden.</p>
+
 <p>Sollte auch in älteren Contao/TYPOlight-Versionen laufen.</p>
 
 
 === Freigabe-Notizen und Änderungs-Log
 <p>siehe Handbuch-Link</p>
 
+
 === Handbuch-Link
 http://www.contao-forge.org/projects/backboneitmodarticle/wiki
+
+
+=== Forum-Link
+http://www.contao-community.de/showthread.php?18873-backboneit_mod_article-Ein-Artikel-als-Modul-verwenden-ohne-InsertTag
     

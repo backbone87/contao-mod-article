@@ -79,6 +79,17 @@ class ModuleIncludeArticleDCA extends Backend {
 		);
 	}
 	
+	
+	
+	public function getLayoutSections() {
+		$this->loadLanguageFile('tl_article');
+		$arrSections = trimsplit(',', $GLOBALS['TL_CONFIG']['customSections']);
+		array_unshift($arrSections, 'header', 'left', 'right', 'main', 'footer');
+		return $arrSections;
+	}
+	
+	
+	
 	private static $objInstance;
 	
 	public static function getInstance() {
