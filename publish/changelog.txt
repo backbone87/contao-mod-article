@@ -1,5 +1,9 @@
 h1. Changelog
 
+h2. 1.1.1
+
+* 1 *Feature*: Utilize chosen in Contao 2.11
+
 h2. 1.1.0
 
 * 1 *Feature*: New module to display all articles of a specific page and optionally of specific columns

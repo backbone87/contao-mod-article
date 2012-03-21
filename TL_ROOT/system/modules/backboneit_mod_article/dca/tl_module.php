@@ -25,7 +25,8 @@ $GLOBALS['TL_DCA']['tl_module']['fields']['backboneit_mod_article_id'] = array(
 	'eval'				=> array(
 		'mandatory'			=> true,
 		'submitOnChange'	=> true,
-		'tl_class'			=> 'clr'
+		'chosen'			=> true,
+//		'tl_class'			=> 'clr'
 	),
 	'wizard'			=> array(
 		array('ModuleIncludeArticleDCA', 'editArticle')
