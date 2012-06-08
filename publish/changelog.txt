@@ -1,5 +1,11 @@
 h1. Changelog
 
+h2. 2.0.0 rc1
+
+* 1 *Notice*: Please BACKUP your Contao database BEFORE UPDATE
+* 1 *Feature*: ContentMultiArticles and ModuleMultiArticles
+* 1 *Fix*: Use CSS settings of inclusion element. (CSS classes are added, ID overwritten)
+
 h2. 1.1.1
 
 * 1 *Feature*: Utilize chosen in Contao 2.11

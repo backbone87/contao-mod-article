@@ -16,6 +16,11 @@ Verschiedene Module um Artikel darzustellen. Behebt Probleme die bei der sonst
 eines Layouts angezeigt werden, einfach in der Artikelverwaltung einer
 "Container"-Seite pflegen zu können.</p>
 
+<h3>Inhaltselement: Mehrfachartikel & Modul: Mehrfachartikel</h3>
+<p>Verpackt mehrere ausgewählte Artikel als Inhaltselement bzw. Modul, um es im
+Seitenlayout einzubinden. Behebt Probleme der üblichen Vorgehensweise mit
+InsertTags.</p>
+
 <h3>Modul: Artikel</h3>
 <p>Verpackt einen Artikel als Modul um es im Seitenlayout einzubinden. Behebt
 Probleme der üblichen Vorgehensweise mit InsertTags.</p>

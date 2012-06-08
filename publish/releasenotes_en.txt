@@ -15,6 +15,10 @@ when using Insert-Tags are avoided.
 <p>The main purpose of this modules is to integrate easy-to-edit content within
 layouts.</p>
 
+<h3>Content element: Multiple articles & Module: Multiple articles</h3>
+<p>Wraps multiple articles into a content element or module respectively. Fixes
+problems caused by the common practice with Insert-Tags.</p>
+
 <h3>Module: Article</h3>
 <p>Wraps an article into a module, to embed it into a page layout. Fixes problems
 caused by the common practice with Insert-Tags.</p>

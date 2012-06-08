@@ -1,8 +1,8 @@
 <?php
 
-class ModuleIncludeArticleDCA extends Backend {
+class IncludeArticleDCA extends Backend {
 
-	public function getArticles(DataContainer $objDC) {
+	public function getArticles($objDC) {
 		$this->import('BackendUser', 'User');
 		
 		$arrPids = array();
@@ -33,7 +33,7 @@ class ModuleIncludeArticleDCA extends Backend {
 					a.pid IN(' . implode(',', array_map('intval', array_keys($arrPids))) . ')
 				ORDER BY
 					parent, a.sorting'
-			)->execute($objDC->id);
+			)->execute();
 		} else {
 			$objAlias = $this->Database->prepare('
 				SELECT
@@ -47,7 +47,7 @@ class ModuleIncludeArticleDCA extends Backend {
 					tl_page AS p ON p.id = a.pid
 				ORDER BY
 					parent, a.sorting
-			')->execute($objDC->id);
+			')->execute();
 		}
 
 		if(!$objAlias->numRows)
@@ -68,13 +68,21 @@ class ModuleIncludeArticleDCA extends Backend {
 		return $arrAlias;
 	}
 	
-	public function editArticle(DataContainer $objDC) {
-		if($objDC->value < 1)
+	public function editArticle(DataContainer $objDC, $objWidget) {
+		if(is_object($objWidget)) {
+			$intArticleID = $objWidget->value;
+		} else {
+			$intArticleID = $objDC->value;
+		}
+		
+		if($intArticleID < 1) {
 			return '';
+		}
+		
 		return sprintf(
 			' <a href="contao/main.php?do=article&amp;table=tl_article&amp;act=edit&amp;id=%s" title="%s" style="padding-left:3px;">%s</a>',
-			$objDC->value,
-			sprintf(specialchars($GLOBALS['TL_LANG']['tl_content']['editalias'][1]), $objDC->value),
+			$intArticleID,
+			sprintf(specialchars($GLOBALS['TL_LANG']['tl_content']['editalias'][1]), $intArticleID),
 			$this->generateImage('alias.gif', $GLOBALS['TL_LANG']['tl_content']['editalias'][0], 'style="vertical-align:top;"')
 		);
 	}

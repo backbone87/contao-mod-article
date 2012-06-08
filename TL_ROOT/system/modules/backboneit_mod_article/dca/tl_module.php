@@ -1,27 +1,77 @@
 <?php
 
-$GLOBALS['TL_DCA']['tl_module']['palettes']['__selector__'][] = 'backboneit_mod_article_setColumns';
+$GLOBALS['TL_DCA']['tl_module']['palettes']['__selector__'][] = 'bbit_mod_art_setColumns';
 
-$GLOBALS['TL_DCA']['tl_module']['palettes']['backboneit_mod_article']
-	= '{title_legend},name,type,backboneit_mod_article_id;'
-	. '{protected_legend:hide},protected;'
-	. '{expert_legend:hide},guests,backboneit_mod_article_nosearch,backboneit_mod_article_container';
+$GLOBALS['TL_DCA']['tl_module']['palettes']['bbit_mod_art']
+	= '{title_legend},name,type,bbit_mod_art_id'
+	. ';{protected_legend:hide},guests,protected'
+	. ';{expert_legend:hide},bbit_mod_art_nosearch,bbit_mod_art_container,cssID';
 	
-$GLOBALS['TL_DCA']['tl_module']['palettes']['backboneit_mod_pageArticles']
-	= '{title_legend},name,type,backboneit_mod_article_page,backboneit_mod_article_setColumns;'
-	. '{protected_legend:hide},protected;'
-	. '{expert_legend:hide},guests,backboneit_mod_article_nosearch,backboneit_mod_article_container';
-
-$GLOBALS['TL_DCA']['tl_module']['subpalettes']['backboneit_mod_article_setColumns']
-	= 'backboneit_mod_article_columns';
-
+$GLOBALS['TL_DCA']['tl_module']['palettes']['bbit_mod_multiArt']
+	= '{title_legend},name,type,bbit_mod_art_multi'
+	. ';{protected_legend:hide},guests,protected';
 	
+$GLOBALS['TL_DCA']['tl_module']['palettes']['bbit_mod_pageArt']
+	= '{title_legend},name,type'
+	. ',bbit_mod_art_page,bbit_mod_art_setColumns'
+	. ';{protected_legend:hide},guests,protected'
+	. ';{expert_legend:hide},bbit_mod_art_nosearch,bbit_mod_art_container,cssID';
 
-$GLOBALS['TL_DCA']['tl_module']['fields']['backboneit_mod_article_id'] = array(
-	'label'				=> &$GLOBALS['TL_LANG']['tl_module']['backboneit_mod_article_id'],
+$GLOBALS['TL_DCA']['tl_module']['subpalettes']['bbit_mod_art_setColumns']
+	= 'bbit_mod_art_columns';
+
+
+$GLOBALS['TL_DCA']['tl_module']['fields']['bbit_mod_art_multi'] = array(
+	'label'			=> &$GLOBALS['TL_LANG']['tl_module']['bbit_mod_art_multi'],
+	'inputType'		=> 'multiColumnWizard',
+	'eval'			=> array(
+		'columnFields' => array(
+			'id' => array(
+				'label'		=> &$GLOBALS['TL_LANG']['tl_module']['bbit_mod_art_id'],
+				'inputType'	=> 'select',
+				'options_callback'	=> array('IncludeArticleDCA', 'getArticles'),
+				'eval'		=> array(
+					'mandatory'		=> true,
+					'submitOnChange'=> true,
+					'chosen'		=> true,
+					'style'			=> 'width: 280px;'
+				),
+				'wizard'			=> array(
+					array('IncludeArticleDCA', 'editArticle')
+				),
+			),
+			'cssID' => array(
+				'label'		=> &$GLOBALS['TL_LANG']['tl_module']['cssID'],
+				'exclude'	=> true,
+				'inputType'	=> 'text',
+				'eval'		=> array(
+					'multiple'		=> true,
+					'size'			=> 2,
+					'style'			=> 'width: 120px;'
+				)
+			),
+			'nosearch' => array(
+				'label'		=> &$GLOBALS['TL_LANG']['tl_module']['bbit_mod_art_nosearch_short'],
+				'inputType'	=> 'checkbox',
+				'eval'		=> array(
+				)
+			),
+			'container' => array(
+				'label'		=> &$GLOBALS['TL_LANG']['tl_module']['bbit_mod_art_container_short'],
+				'inputType'	=> 'checkbox',
+				'eval'		=> array(
+				)
+			),
+		),
+		'tl_class'			=> 'clr'
+	),
+);
+
+$GLOBALS['TL_DCA']['tl_module']['fields']['bbit_mod_art_id'] = array(
+	'label'				=> &$GLOBALS['TL_LANG']['tl_module']['bbit_mod_art_id'],
 	'exclude'			=> true,
 	'inputType'			=> 'select',
-	'options_callback'	=> array('ModuleIncludeArticleDCA', 'getArticles'),
+	'options_callback'	=> array('IncludeArticleDCA', 'getArticles'),
 	'eval'				=> array(
 		'mandatory'			=> true,
 		'submitOnChange'	=> true,
@@ -29,14 +79,13 @@ $GLOBALS['TL_DCA']['tl_module']['fields']['backboneit_mod_article_id'] = array(
 //		'tl_class'			=> 'clr'
 	),
 	'wizard'			=> array(
-		array('ModuleIncludeArticleDCA', 'editArticle')
+		array('IncludeArticleDCA', 'editArticle')
 	)
 );
 
 
-
-$GLOBALS['TL_DCA']['tl_module']['fields']['backboneit_mod_article_page'] = array(
-	'label'		=> &$GLOBALS['TL_LANG']['tl_module']['backboneit_mod_article_page'],
+$GLOBALS['TL_DCA']['tl_module']['fields']['bbit_mod_art_page'] = array(
+	'label'		=> &$GLOBALS['TL_LANG']['tl_module']['bbit_mod_art_page'],
 	'exclude'	=> true,
 	'inputType'	=> 'pageTree',
 	'eval'		=> array(
@@ -46,8 +95,8 @@ $GLOBALS['TL_DCA']['tl_module']['fields']['backboneit_mod_article_page'] = array
 	)
 );
 
-$GLOBALS['TL_DCA']['tl_module']['fields']['backboneit_mod_article_setColumns'] = array(
-	'label'				=> &$GLOBALS['TL_LANG']['tl_module']['backboneit_mod_article_setColumns'],
+$GLOBALS['TL_DCA']['tl_module']['fields']['bbit_mod_art_setColumns'] = array(
+	'label'				=> &$GLOBALS['TL_LANG']['tl_module']['bbit_mod_art_setColumns'],
 	'exclude'			=> true,
 	'inputType'			=> 'checkbox',
 	'eval'				=> array(
@@ -56,11 +105,11 @@ $GLOBALS['TL_DCA']['tl_module']['fields']['backboneit_mod_article_setColumns'] =
 	)
 );
 
-$GLOBALS['TL_DCA']['tl_module']['fields']['backboneit_mod_article_columns'] = array(
-	'label'				=> &$GLOBALS['TL_LANG']['tl_module']['backboneit_mod_article_columns'],
+$GLOBALS['TL_DCA']['tl_module']['fields']['bbit_mod_art_columns'] = array(
+	'label'				=> &$GLOBALS['TL_LANG']['tl_module']['bbit_mod_art_columns'],
 	'exclude'			=> true,
 	'inputType'			=> 'checkbox',
-	'options_callback'	=> array('ModuleIncludeArticleDCA', 'getLayoutSections'),
+	'options_callback'	=> array('IncludeArticleDCA', 'getLayoutSections'),
 	'reference'			=> &$GLOBALS['TL_LANG']['tl_article'],
 	'eval'				=> array(
 		'multiple'			=> true,
@@ -69,9 +118,8 @@ $GLOBALS['TL_DCA']['tl_module']['fields']['backboneit_mod_article_columns'] = ar
 );
 
 
-
-$GLOBALS['TL_DCA']['tl_module']['fields']['backboneit_mod_article_nosearch'] = array(
-	'label'				=> &$GLOBALS['TL_LANG']['tl_module']['backboneit_mod_article_nosearch'],
+$GLOBALS['TL_DCA']['tl_module']['fields']['bbit_mod_art_nosearch'] = array(
+	'label'				=> &$GLOBALS['TL_LANG']['tl_module']['bbit_mod_art_nosearch'],
 	'exclude'			=> true,
 	'inputType'			=> 'checkbox',
 	'eval'				=> array(
@@ -79,8 +127,8 @@ $GLOBALS['TL_DCA']['tl_module']['fields']['backboneit_mod_article_nosearch'] = a
 	)
 );
 
-$GLOBALS['TL_DCA']['tl_module']['fields']['backboneit_mod_article_container'] = array(
-	'label'				=> &$GLOBALS['TL_LANG']['tl_module']['backboneit_mod_article_container'],
+$GLOBALS['TL_DCA']['tl_module']['fields']['bbit_mod_art_container'] = array(
+	'label'				=> &$GLOBALS['TL_LANG']['tl_module']['bbit_mod_art_container'],
 	'exclude'			=> true,
 	'inputType'			=> 'checkbox',
 	'eval'				=> array(
