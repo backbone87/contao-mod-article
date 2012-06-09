@@ -12,6 +12,11 @@ when using Insert-Tags are avoided.
 
 
 === Beschreibung
+<p><strong>ATTENSION: When updating from version 1.x to version 2.x or higher,
+the extension "MultiColumnWizard" may be needed to be installed manually,
+because the Contao ER Client does not respect added dependencies. New extension
+installations are not subject to this issue.</strong></p>
+
 <p>The main purpose of this modules is to integrate easy-to-edit content within
 layouts.</p>
 

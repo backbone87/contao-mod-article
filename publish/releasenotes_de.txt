@@ -12,6 +12,12 @@ Verschiedene Module um Artikel darzustellen. Behebt Probleme die bei der sonst
 
 
 === Beschreibung
+<p><strong>ACHTUNG: Bei Updates von Version 1.x auf Version 2 oder höher, muss
+die Erweiterung "MultiColumnWizard" gegebenenfalls manuell nachinstalliert
+werden, da der Contao ER Client keine nachträglich hinzugekommenen
+Abhängigkeiten berücksichtigt. Neuinstallationen sind hiervon nicht betroffen.
+</strong></p>
+
 <p>Die Hauptanwendung dieser Module liegt darin, Inhalte die auf allen Seiten
 eines Layouts angezeigt werden, einfach in der Artikelverwaltung einer
 "Container"-Seite pflegen zu können.</p>
