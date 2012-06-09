@@ -1,7 +1,7 @@
 <?php
 
 $GLOBALS['TL_DCA']['tl_content']['palettes']['bbit_mod_multiArt']
-	= '{title_legend},name,type,bbit_mod_art_multi'
+	= '{type_legend},name,type,bbit_mod_art_multi'
 	. ';{protected_legend:hide},guests,protected'
 	. ';{expert_legend:hide},invisible';
 	
