@@ -9,7 +9,8 @@ $GLOBALS['TL_DCA']['tl_module']['palettes']['bbit_mod_art']
 	
 $GLOBALS['TL_DCA']['tl_module']['palettes']['bbit_mod_multiArt']
 	= '{title_legend},name,type,bbit_mod_art_multi'
-	. ';{protected_legend:hide},guests,protected';
+	. ';{protected_legend:hide},guests,protected'
+	. ';{expert_legend},bbit_mod_art_multiContainer,cssID,space';
 	
 $GLOBALS['TL_DCA']['tl_module']['palettes']['bbit_mod_pageArt']
 	= '{title_legend},name,type'
@@ -133,5 +134,14 @@ $GLOBALS['TL_DCA']['tl_module']['fields']['bbit_mod_art_container'] = array(
 	'inputType'			=> 'checkbox',
 	'eval'				=> array(
 		'tl_class'			=> 'w50 cbx'
+	)
+);
+
+$GLOBALS['TL_DCA']['tl_module']['fields']['bbit_mod_art_multiContainer'] = array(
+	'label'				=> &$GLOBALS['TL_LANG']['tl_module']['bbit_mod_art_multiContainer'],
+	'exclude'			=> true,
+	'inputType'			=> 'checkbox',
+	'eval'				=> array(
+		'tl_class'			=> 'clr w50 cbx m12'
 	)
 );

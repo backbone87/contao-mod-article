@@ -11,4 +11,6 @@ $GLOBALS['TL_LANG']['tl_content']['bbit_mod_art_nosearch_short']
 	
 $GLOBALS['TL_LANG']['tl_content']['bbit_mod_art_container_short']
 	= array('C', 'Gibt zusätzlich den Artikelcontainer aus anstatt nur die Inhaltselemente des Artikels.');
-	
+
+$GLOBALS['TL_LANG']['tl_content']['bbit_mod_art_multiContainer']
+	= array('Gemeinsamen Artikelcontainer ausgeben', 'Gibt zusätzlich einen Artikelcontainer um alle ausgewählten Artikel zusammen aus.');

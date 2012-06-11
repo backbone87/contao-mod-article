@@ -10,6 +10,7 @@
 
 CREATE TABLE `tl_content` (
   `bbit_mod_art_multi` blob NULL,
+  `bbit_mod_art_multiContainer` char(1) NOT NULL default '',
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 CREATE TABLE `tl_module` (
@@ -23,4 +24,5 @@ CREATE TABLE `tl_module` (
   
   `bbit_mod_art_nosearch` char(1) NOT NULL default '',
   `bbit_mod_art_container` char(1) NOT NULL default '',
+  `bbit_mod_art_multiContainer` char(1) NOT NULL default '',
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;

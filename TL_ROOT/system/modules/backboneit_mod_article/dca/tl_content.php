@@ -3,7 +3,7 @@
 $GLOBALS['TL_DCA']['tl_content']['palettes']['bbit_mod_multiArt']
 	= '{type_legend},name,type,bbit_mod_art_multi'
 	. ';{protected_legend:hide},guests,protected'
-	. ';{expert_legend:hide},invisible';
+	. ';{expert_legend:hide},invisible,bbit_mod_art_multiContainer,cssID,space';
 	
 
 $GLOBALS['TL_DCA']['tl_content']['fields']['bbit_mod_art_multi'] = array(
@@ -50,4 +50,13 @@ $GLOBALS['TL_DCA']['tl_content']['fields']['bbit_mod_art_multi'] = array(
 		),
 		'tl_class'			=> 'clr'
 	),
+);
+
+$GLOBALS['TL_DCA']['tl_content']['fields']['bbit_mod_art_multiContainer'] = array(
+	'label'				=> &$GLOBALS['TL_LANG']['tl_content']['bbit_mod_art_multiContainer'],
+	'exclude'			=> true,
+	'inputType'			=> 'checkbox',
+	'eval'				=> array(
+		'tl_class'			=> 'w50 cbx'
+	)
 );
