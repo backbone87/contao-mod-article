@@ -2,6 +2,7 @@ h1. Changelog
 
 h2. 2.0.0 stable
 
+* 4 *Fix*: Warning for missing argument #2 in method IncludeArticleDCA::editArticle
 * 1 *Feature*: Wrap container around all articles in multi article elements
 
 h2. 2.0.0 rc1

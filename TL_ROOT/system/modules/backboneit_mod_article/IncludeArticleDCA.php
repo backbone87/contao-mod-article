@@ -68,7 +68,7 @@ class IncludeArticleDCA extends Backend {
 		return $arrAlias;
 	}
 	
-	public function editArticle(DataContainer $objDC, $objWidget) {
+	public function editArticle(DataContainer $objDC, $objWidget = null) {
 		if(is_object($objWidget)) {
 			$intArticleID = $objWidget->value;
 		} else {
