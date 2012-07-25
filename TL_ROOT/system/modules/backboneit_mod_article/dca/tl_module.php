@@ -3,20 +3,22 @@
 $GLOBALS['TL_DCA']['tl_module']['palettes']['__selector__'][] = 'bbit_mod_art_setColumns';
 
 $GLOBALS['TL_DCA']['tl_module']['palettes']['bbit_mod_art']
-	= '{title_legend},name,type,bbit_mod_art_id'
-	. ';{protected_legend:hide},guests,protected'
-	. ';{expert_legend:hide},bbit_mod_art_nosearch,bbit_mod_art_container,cssID';
+	= '{title_legend},name,type'
+	. ';{bbit_mod_art_legend},bbit_mod_art_id,bbit_mod_art_nosearch,bbit_mod_art_container'
+	. ';{protected_legend:hide},protected'
+	. ';{expert_legend:hide},guests,cssID';
 	
 $GLOBALS['TL_DCA']['tl_module']['palettes']['bbit_mod_multiArt']
-	= '{title_legend},name,type,bbit_mod_art_multi'
-	. ';{protected_legend:hide},guests,protected'
-	. ';{expert_legend},bbit_mod_art_multiContainer,cssID,space';
+	= '{title_legend},name,type'
+	. ';{bbit_mod_art_legend},bbit_mod_art_multi,bbit_mod_art_multiContainer'
+	. ';{protected_legend:hide},protected'
+	. ';{expert_legend},guests,cssID,space';
 	
 $GLOBALS['TL_DCA']['tl_module']['palettes']['bbit_mod_pageArt']
 	= '{title_legend},name,type'
-	. ',bbit_mod_art_page,bbit_mod_art_setColumns'
-	. ';{protected_legend:hide},guests,protected'
-	. ';{expert_legend:hide},bbit_mod_art_nosearch,bbit_mod_art_container,cssID';
+	. ';{bbit_mod_art_legend},bbit_mod_art_page,bbit_mod_art_setColumns,bbit_mod_art_nosearch,bbit_mod_art_container'
+	. ';{protected_legend:hide},protected'
+	. ';{expert_legend:hide},guests,cssID';
 
 $GLOBALS['TL_DCA']['tl_module']['subpalettes']['bbit_mod_art_setColumns']
 	= 'bbit_mod_art_columns';
@@ -64,7 +66,8 @@ $GLOBALS['TL_DCA']['tl_module']['fields']['bbit_mod_art_multi'] = array(
 				)
 			),
 		),
-		'tl_class'			=> 'clr'
+		'tl_class'			=> '',
+// 		'style'				=> 'overflow: visible;',
 	),
 );
 
@@ -142,6 +145,6 @@ $GLOBALS['TL_DCA']['tl_module']['fields']['bbit_mod_art_multiContainer'] = array
 	'exclude'			=> true,
 	'inputType'			=> 'checkbox',
 	'eval'				=> array(
-		'tl_class'			=> 'clr w50 cbx m12'
+		'tl_class'			=> 'clr'
 	)
 );

@@ -1,9 +1,10 @@
 <?php
 
 $GLOBALS['TL_DCA']['tl_content']['palettes']['bbit_mod_multiArt']
-	= '{type_legend},name,type,bbit_mod_art_multi'
-	. ';{protected_legend:hide},guests,protected'
-	. ';{expert_legend:hide},invisible,bbit_mod_art_multiContainer,cssID,space';
+	= '{type_legend},name,type'
+	. ';{bbit_mod_art_legend},bbit_mod_art_multi,bbit_mod_art_multiContainer'
+	. ';{protected_legend:hide},protected'
+	. ';{expert_legend:hide},guests,invisible,cssID,space';
 	
 
 $GLOBALS['TL_DCA']['tl_content']['fields']['bbit_mod_art_multi'] = array(
@@ -48,7 +49,7 @@ $GLOBALS['TL_DCA']['tl_content']['fields']['bbit_mod_art_multi'] = array(
 				)
 			),
 		),
-		'tl_class'			=> 'clr'
+// 		'tl_class'			=> 'clr'
 	),
 );
 
@@ -57,6 +58,6 @@ $GLOBALS['TL_DCA']['tl_content']['fields']['bbit_mod_art_multiContainer'] = arra
 	'exclude'			=> true,
 	'inputType'			=> 'checkbox',
 	'eval'				=> array(
-		'tl_class'			=> 'w50 cbx'
+		'tl_class'			=> 'clr'
 	)
 );
