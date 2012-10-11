@@ -1,6 +1,6 @@
 <?php
 
-$GLOBALS['TL_LANG']['tl_module']['bbit_mod_art_legend']
+$GLOBALS['TL_LANG']['tl_content']['bbit_mod_art_legend']
 	= 'Artikel';
 
 $GLOBALS['TL_LANG']['tl_content']['bbit_mod_art_multi']
