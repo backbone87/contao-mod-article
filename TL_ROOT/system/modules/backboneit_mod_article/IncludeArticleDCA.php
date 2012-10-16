@@ -68,25 +68,23 @@ class IncludeArticleDCA extends Backend {
 		return $arrAlias;
 	}
 	
-	public function editArticle(DataContainer $objDC, $objWidget = null) {
-		if(is_object($objWidget)) {
-			$intArticleID = $objWidget->value;
-		} else {
-			$intArticleID = $objDC->value;
-		}
-		
-		if($intArticleID < 1) {
-			return '';
-		}
-		
+	public function editArticle(DataContainer $objDC) {
+		$GLOBALS['TL_JAVASCRIPT']['bbit.cto.articleWizard'] = 'system/modules/backboneit_mod_article/html/js/bbit.cto.articleWizard.js';
 		return sprintf(
-			' <a href="contao/main.php?do=article&amp;table=tl_article&amp;act=edit&amp;id=%s" title="%s" style="padding-left:3px;">%s</a>',
-			$intArticleID,
-			sprintf(specialchars($GLOBALS['TL_LANG']['tl_content']['editalias'][1]), $intArticleID),
-			$this->generateImage('alias.gif', $GLOBALS['TL_LANG']['tl_content']['editalias'][0], 'style="vertical-align:top;"')
+			' <a href="contao/main.php?do=article&amp;table=tl_content&amp;id=" class="bbit_cto_articleWizard" title="%s">%s</a>',
+			$GLOBALS['TL_LANG']['MSC']['bbit_cto_articleWizard_edit'],
+			$this->generateImage('edit.gif', $GLOBALS['TL_LANG']['MSC']['bbit_cto_articleWizard_edit'])
+		) . sprintf(
+			' <a href="contao/main.php?do=article&amp;table=tl_article&amp;act=edit&amp;id=" class="bbit_cto_articleWizard" title="%s">%s</a>',
+			$GLOBALS['TL_LANG']['MSC']['bbit_cto_articleWizard_header'],
+			$this->generateImage('header.gif', $GLOBALS['TL_LANG']['MSC']['bbit_cto_articleWizard_header'])
 		);
 	}
 	
+
+	public function getMultiTemplates() {
+		return $this->getTemplateGroup('bbit_mod_art_multi_');
+	}
 	
 	
 	public function getLayoutSections() {

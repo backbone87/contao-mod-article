@@ -2,8 +2,16 @@
 
 final class IncludeArticleUtils {
 	
+	const INDEXER_STOP		= '<!-- indexer::stop -->';
+	const INDEXER_CONTINUE	= '<!-- indexer::continue -->';
+	private static $arrIndexerTokens = array(self::INDEXER_STOP, self::INDEXER_CONTINUE);
+	
 	public static function wrapNoIndex($strContent) {
-		return strlen($strContent) ? '<!-- indexer::stop -->' . $strContent . '<!-- indexer::continue -->' : '';
+		if(strlen($strContent)) {
+			$strContent = str_replace(self::$arrIndexerTokens, '', $strContent);
+			$strContent = self::INDEXER_STOP . $strContent . self::INDEXER_CONTINUE;
+		}
+		return $strContent;
 	}
 	
 	public static function generateArticle($intArticleID, $blnNoSearch = false, $blnContainer = false, $strColumn = 'main', $arrCSS = null) {

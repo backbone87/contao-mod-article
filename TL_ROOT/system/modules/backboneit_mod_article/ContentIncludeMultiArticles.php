@@ -2,8 +2,6 @@
 
 class ContentIncludeMultiArticles extends ContentElement {
 	
-	protected $strTemplate = 'ce_bbit_mod_art_multi';
-	
 	protected $strArticles;
 	
 	public function __construct(Database_Result $objElement) {
@@ -11,16 +9,16 @@ class ContentIncludeMultiArticles extends ContentElement {
 	}
 
 	public function generate() {
-		$this->strArticles = IncludeArticleUtils::generateMultiArticles($this->bbit_mod_art_multi);
-		if($this->bbit_mod_art_multiContainer) {
+		$this->strTemplate = $this->bbit_mod_art_multiTemplate;
+		if($this->strTemplate) {
 			return parent::generate();
 		} else {
-			return $this->strArticles;
+			return IncludeArticleUtils::generateMultiArticles($this->bbit_mod_art_multi);
 		}
 	}
 	
 	protected function compile() {
-		$this->Template->articles = $this->strArticles;
+		$this->Template->articles = deserialize($this->bbit_mod_art_multi, true);
 	}
 	
 }

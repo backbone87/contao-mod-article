@@ -2,7 +2,7 @@
 
 $GLOBALS['TL_DCA']['tl_content']['palettes']['bbit_mod_multiArt']
 	= '{type_legend},name,type'
-	. ';{bbit_mod_art_legend},bbit_mod_art_multi,bbit_mod_art_multiContainer'
+	. ';{bbit_mod_art_legend},bbit_mod_art_multi,bbit_mod_art_multiTemplate'
 	. ';{protected_legend:hide},protected'
 	. ';{expert_legend:hide},guests,invisible,cssID,space';
 	
@@ -18,7 +18,6 @@ $GLOBALS['TL_DCA']['tl_content']['fields']['bbit_mod_art_multi'] = array(
 				'options_callback'	=> array('IncludeArticleDCA', 'getArticles'),
 				'eval'		=> array(
 					'mandatory'		=> true,
-					'submitOnChange'=> true,
 					'chosen'		=> true,
 					'style'			=> 'width: 280px;'
 				),
@@ -33,7 +32,7 @@ $GLOBALS['TL_DCA']['tl_content']['fields']['bbit_mod_art_multi'] = array(
 				'eval'		=> array(
 					'multiple'		=> true,
 					'size'			=> 2,
-					'style'			=> 'width: 120px;'
+					'style'			=> 'width: 100px;'
 				)
 			),
 			'nosearch' => array(
@@ -53,11 +52,13 @@ $GLOBALS['TL_DCA']['tl_content']['fields']['bbit_mod_art_multi'] = array(
 	),
 );
 
-$GLOBALS['TL_DCA']['tl_content']['fields']['bbit_mod_art_multiContainer'] = array(
-	'label'				=> &$GLOBALS['TL_LANG']['tl_content']['bbit_mod_art_multiContainer'],
+$GLOBALS['TL_DCA']['tl_content']['fields']['bbit_mod_art_multiTemplate'] = array(
+	'label'				=> &$GLOBALS['TL_LANG']['tl_content']['bbit_mod_art_multiTemplate'],
 	'exclude'			=> true,
-	'inputType'			=> 'checkbox',
+	'inputType'			=> 'select',
+	'options_callback'	=> array('IncludeArticleDCA', 'getMultiTemplates'),
 	'eval'				=> array(
+		'includeBlankOption'=> true,
 		'tl_class'			=> 'clr'
 	)
 );
