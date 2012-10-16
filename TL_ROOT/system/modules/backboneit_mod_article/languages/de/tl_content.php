@@ -11,5 +11,5 @@ $GLOBALS['TL_LANG']['tl_content']['bbit_mod_art_nosearch_short']
 	= array('S', 'Schließt dieses Artikelmodul von der Contao-Suche aus.');
 $GLOBALS['TL_LANG']['tl_content']['bbit_mod_art_container_short']
 	= array('C', 'Gibt zusätzlich den Artikelcontainer aus anstatt nur die Inhaltselemente des Artikels.');
-$GLOBALS['TL_LANG']['tl_content']['bbit_mod_art_multiContainer']
-	= array('Gemeinsamen Artikelcontainer ausgeben', 'Gibt zusätzlich einen Artikelcontainer um alle ausgewählten Artikel zusammen aus.');
+$GLOBALS['TL_LANG']['tl_content']['bbit_mod_art_multiTemplate']
+	= array('Template', 'Mit diesem Template kann gesteuert werden, wie die Artikel ausgegeben werden. Zum Beispiel fügt das Template "bbit_mod_art_multi_container" einen gemeinsamen "div"-Container um alle Artikel herum. Wird kein Template gewählt werden die Artikel hintereinanderweg ausgegeben.');

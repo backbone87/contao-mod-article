@@ -13,3 +13,6 @@ $GLOBALS['TL_LANG']['tl_content']['bbit_mod_art_container_short']
 	= array('C', 'Output container for this article, not just its content elements.');
 $GLOBALS['TL_LANG']['tl_content']['bbit_mod_art_multiContainer']
 	= array('Output wrapping container', 'Additionally outputs a container that wraps all inserted articles.');
+$GLOBALS['TL_LANG']['tl_content']['bbit_mod_art_multiTemplate']
+	= array('Template', 'The selected template defines, how the articles are rendered. Selecting no template will render them directly one after another.');
+	

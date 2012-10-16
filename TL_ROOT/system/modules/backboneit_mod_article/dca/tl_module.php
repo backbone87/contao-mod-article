@@ -138,8 +138,8 @@ $GLOBALS['TL_DCA']['tl_module']['fields']['bbit_mod_art_container'] = array(
 	)
 );
 
-$GLOBALS['TL_DCA']['tl_content']['fields']['bbit_mod_art_multiTemplate'] = array(
-	'label'				=> &$GLOBALS['TL_LANG']['tl_content']['bbit_mod_art_multiTemplate'],
+$GLOBALS['TL_DCA']['tl_module']['fields']['bbit_mod_art_multiTemplate'] = array(
+	'label'				=> &$GLOBALS['TL_LANG']['tl_module']['bbit_mod_art_multiTemplate'],
 	'exclude'			=> true,
 	'inputType'			=> 'select',
 	'options_callback'	=> array('IncludeArticleDCA', 'getMultiTemplates'),
