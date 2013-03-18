@@ -1,5 +1,13 @@
 h1. Changelog
 
+h2. 2.1.0 stable
+
+* 1 *Feature*: Call getArticle hook
+
+h2. 2.1.0 rc1
+
+* 1 *Feature*: Templating of multi articles
+
 h2. 2.0.0 stable
 
 * 7 *Fix*: Fixed some wrong keys in translation labels 
