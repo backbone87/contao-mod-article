@@ -31,15 +31,22 @@ final class IncludeArticleUtils {
 			return '';
 		}
 		
+		$objArticle->headline = $objArticle->title;
+		$objArticle->multiMode = false;//$blnMultiMode;
+		
+		if (isset($GLOBALS['TL_HOOKS']['getArticle']) && is_array($GLOBALS['TL_HOOKS']['getArticle'])) {
+			foreach ($GLOBALS['TL_HOOKS']['getArticle'] as $callback) {
+				$this->import($callback[0]);
+				$this->$callback[0]->$callback[1]($objArticle);
+			}
+		}
+		
 		$objArticle = new ModuleArticle($objArticle, $strColumn);
 		
 		$arrCSS = deserialize($arrCSS, true);
 		strlen($arrCSS[0]) || $arrCSS[0] = $objArticle->cssID[0];
 		$arrCSS[1] = trim($arrCSS[1] . ' ' . $objArticle->cssID[1]);
-		
 		$objArticle->cssID = $arrCSS;
-		$objArticle->headline = $objArticle->title;
-		$objArticle->multiMode = false;//$blnMultiMode;
 		
 		$strArticle = $objArticle->generate(!$blnContainer);
 		$blnNoSearch && $strArticle = self::wrapNoIndex($strArticle);
