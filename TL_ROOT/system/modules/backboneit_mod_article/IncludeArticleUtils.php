@@ -1,6 +1,6 @@
 <?php
 
-final class IncludeArticleUtils {
+final class IncludeArticleUtils extends System {
 	
 	const INDEXER_STOP		= '<!-- indexer::stop -->';
 	const INDEXER_CONTINUE	= '<!-- indexer::continue -->';
@@ -34,12 +34,7 @@ final class IncludeArticleUtils {
 		$objArticle->headline = $objArticle->title;
 		$objArticle->multiMode = false;//$blnMultiMode;
 		
-		if (isset($GLOBALS['TL_HOOKS']['getArticle']) && is_array($GLOBALS['TL_HOOKS']['getArticle'])) {
-			foreach ($GLOBALS['TL_HOOKS']['getArticle'] as $callback) {
-				$this->import($callback[0]);
-				$this->$callback[0]->$callback[1]($objArticle);
-			}
-		}
+		self::getInstance()->executeGetArticleHook($objArticle);
 		
 		$objArticle = new ModuleArticle($objArticle, $strColumn);
 		
@@ -115,7 +110,26 @@ final class IncludeArticleUtils {
 		return $strArticles;
 	}
 	
+	protected function executeGetArticleHook($objArticle) {
+		if(isset($GLOBALS['TL_HOOKS']['getArticle']) && is_array($GLOBALS['TL_HOOKS']['getArticle'])) {
+			foreach($GLOBALS['TL_HOOKS']['getArticle'] as $callback) {
+				$this->import($callback[0]);
+				$this->$callback[0]->$callback[1]($objArticle);
+			}
+		}
+	}
+	
+	protected static $objInstance;
+	
+	protected static function getInstance() {
+		if(!isset(self::$objInstance)) {
+			self::$objInstance = new self();
+		}
+		return self::$objInstance;
+	}
+	
 	protected function __construct() {
+		parent::__construct();
 	}
 	
 	protected function __clone() {
