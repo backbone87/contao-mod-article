@@ -5,7 +5,7 @@ $GLOBALS['TL_DCA']['tl_content']['palettes']['bbit_mod_multiArt']
 	. ';{bbit_mod_art_legend},bbit_mod_art_multi,bbit_mod_art_multiTemplate'
 	. ';{protected_legend:hide},protected'
 	. ';{expert_legend:hide},guests,invisible,cssID,space';
-	
+
 
 $GLOBALS['TL_DCA']['tl_content']['fields']['bbit_mod_art_multi'] = array(
 	'label'			=> &$GLOBALS['TL_LANG']['tl_content']['bbit_mod_art_multi'],

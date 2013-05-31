@@ -5,7 +5,7 @@ class ModuleIncludePageArticles extends Module {
 	public function __construct(Database_Result $objModule, $strColumn = 'main') {
 		parent::__construct($objModule, $strColumn);
 	}
-	
+
 	public function generate() {
 		return IncludeArticleUtils::generatePageArticles(
 			$this->bbit_mod_art_page,
@@ -21,5 +21,5 @@ class ModuleIncludePageArticles extends Module {
 
 	protected function compile() {
 	}
-	
+
 }

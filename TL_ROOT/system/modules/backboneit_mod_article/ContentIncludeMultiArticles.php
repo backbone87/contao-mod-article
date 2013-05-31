@@ -1,9 +1,9 @@
 <?php
 
 class ContentIncludeMultiArticles extends ContentElement {
-	
+
 	protected $strArticles;
-	
+
 	public function __construct(Database_Result $objElement) {
 		parent::__construct($objElement);
 	}
@@ -16,9 +16,9 @@ class ContentIncludeMultiArticles extends ContentElement {
 			return IncludeArticleUtils::generateMultiArticles($this->bbit_mod_art_multi);
 		}
 	}
-	
+
 	protected function compile() {
 		$this->Template->articles = deserialize($this->bbit_mod_art_multi, true);
 	}
-	
+
 }

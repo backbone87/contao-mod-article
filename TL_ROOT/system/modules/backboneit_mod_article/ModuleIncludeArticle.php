@@ -1,7 +1,7 @@
 <?php
 
 class ModuleIncludeArticle extends Module {
-	
+
 	public function __construct(Database_Result $objModule, $strColumn = 'main') {
 		parent::__construct($objModule, $strColumn);
 	}
@@ -18,5 +18,5 @@ class ModuleIncludeArticle extends Module {
 
 	protected function compile() {
 	}
-	
+
 }

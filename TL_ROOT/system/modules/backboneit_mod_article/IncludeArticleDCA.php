@@ -4,7 +4,7 @@ class IncludeArticleDCA extends Backend {
 
 	public function getArticles($objDC) {
 		$this->import('BackendUser', 'User');
-		
+
 		$arrPids = array();
 		$arrAlias = array();
 
@@ -52,7 +52,7 @@ class IncludeArticleDCA extends Backend {
 
 		if(!$objAlias->numRows)
 			return $arrAlias;
-			
+
 		$this->loadLanguageFile('tl_article');
 
 		while($objAlias->next())
@@ -64,10 +64,10 @@ class IncludeArticleDCA extends Backend {
 					: $objAlias->inColumn,
 				$objAlias->id
 			);
-		
+
 		return $arrAlias;
 	}
-	
+
 	public function editArticle(DataContainer $objDC) {
 		$GLOBALS['TL_JAVASCRIPT']['bbit.cto.articleWizard'] = 'system/modules/backboneit_mod_article/html/js/bbit.cto.articleWizard.js';
 		return sprintf(
@@ -80,29 +80,29 @@ class IncludeArticleDCA extends Backend {
 			$this->generateImage('header.gif', $GLOBALS['TL_LANG']['MSC']['bbit_cto_articleWizard_header'])
 		);
 	}
-	
+
 
 	public function getMultiTemplates() {
 		return $this->getTemplateGroup('bbit_mod_art_multi_');
 	}
-	
-	
+
+
 	public function getLayoutSections() {
 		$this->loadLanguageFile('tl_article');
 		$arrSections = trimsplit(',', $GLOBALS['TL_CONFIG']['customSections']);
 		array_unshift($arrSections, 'header', 'left', 'right', 'main', 'footer');
 		return $arrSections;
 	}
-	
-	
-	
+
+
+
 	private static $objInstance;
-	
+
 	public static function getInstance() {
 		if(isset(self::$objInstance))
 			return self::$objInstance;
-			
+
 		return self::$objInstance = new self();
 	}
-	
+
 }

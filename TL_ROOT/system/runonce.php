@@ -17,7 +17,7 @@ class UniversalRunonce extends Controller
 	public function __construct()
 	{
 		parent::__construct();
-		
+
 		// Fix potential Exception on line 0 because of __destruct method (see http://dev.contao.org/issues/2236)
 		$this->import((TL_MODE=='BE' ? 'BackendUser' : 'FrontendUser'), 'User');
 		$this->import('Database');
@@ -31,7 +31,7 @@ class UniversalRunonce extends Controller
 	{
 		$this->import('Files');
 		$arrModules = scan(TL_ROOT . '/system/modules/');
-		
+
 		foreach ($arrModules as $strModule)
 		{
 			if ((@include(TL_ROOT . '/system/modules/' . $strModule . '/config/runonce.php')) !== false)

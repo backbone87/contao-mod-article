@@ -7,12 +7,12 @@
 	<property name="mincss.dir" value="${build.module}/css" />
 
 	<!-- <import file="ext/yui-compressor/yui.xml" /> -->
-	
+
 	<target name="clean">
 		<delete dir="${build.dir}" />
 		<mkdir dir="${build.dir}/TL_ROOT" />
 	</target>
-	
+
 	<target name="build" depends="clean">
 		<copy todir="${build.dir}/TL_ROOT">
 			<fileset dir="TL_ROOT" includes="**/*.php" />
@@ -24,7 +24,7 @@
 		<copy todir="${build.dir}/TL_ROOT">
 			<fileset dir="TL_ROOT" excludes="**/*.php" />
 		</copy>
-		
+
 	  	<zip destfile="${build.dir}/backboneit_mod_article.zip">
 	  		<zipfileset dir="${build.dir}/TL_ROOT" />
 	  	</zip>

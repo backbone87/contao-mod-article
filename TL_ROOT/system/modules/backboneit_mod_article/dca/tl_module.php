@@ -7,13 +7,13 @@ $GLOBALS['TL_DCA']['tl_module']['palettes']['bbit_mod_art']
 	. ';{bbit_mod_art_legend},bbit_mod_art_id,bbit_mod_art_nosearch,bbit_mod_art_container'
 	. ';{protected_legend:hide},protected'
 	. ';{expert_legend:hide},guests,cssID';
-	
+
 $GLOBALS['TL_DCA']['tl_module']['palettes']['bbit_mod_multiArt']
 	= '{title_legend},name,type'
 	. ';{bbit_mod_art_legend},bbit_mod_art_multi,bbit_mod_art_multiTemplate'
 	. ';{protected_legend:hide},protected'
 	. ';{expert_legend},guests,cssID,space';
-	
+
 $GLOBALS['TL_DCA']['tl_module']['palettes']['bbit_mod_pageArt']
 	= '{title_legend},name,type'
 	. ';{bbit_mod_art_legend},bbit_mod_art_page,bbit_mod_art_setColumns,bbit_mod_art_nosearch,bbit_mod_art_container'
