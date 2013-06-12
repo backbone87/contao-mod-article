@@ -1,5 +1,9 @@
 h1. Changelog
 
+h2. 2.2.0 stable
+
+* 1 *Feature*: New page articles CE
+
 h2. 2.1.0 stable
 
 * 1 *Feature*: Call getArticle hook
