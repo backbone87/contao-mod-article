@@ -13,3 +13,12 @@ $GLOBALS['TL_LANG']['tl_content']['bbit_mod_art_container_short']
 	= array('C', 'Gibt zusätzlich den Artikelcontainer aus anstatt nur die Inhaltselemente des Artikels.');
 $GLOBALS['TL_LANG']['tl_content']['bbit_mod_art_multiTemplate']
 	= array('Template', 'Mit diesem Template kann gesteuert werden, wie die Artikel ausgegeben werden. Zum Beispiel fügt das Template "bbit_mod_art_multi_container" einen gemeinsamen "div"-Container um alle Artikel herum. Wird kein Template gewählt werden die Artikel hintereinanderweg ausgegeben.');
+
+$GLOBALS['TL_LANG']['tl_content']['bbit_mod_art_page']
+	= array('Referenzseite', 'Die Seite dessen Artikel dargestellt werden sollen.');
+$GLOBALS['TL_LANG']['tl_content']['bbit_mod_art_columns']
+	= array('Layoutbereiche', 'Die Layoutbereiche aus denen die Artikel angezeigt werden sollen.');
+$GLOBALS['TL_LANG']['tl_content']['bbit_mod_art_nosearch']
+	= array('Nicht durchsuchen', 'Schließt dieses Artikelmodul von der Contao-Suche aus.');
+$GLOBALS['TL_LANG']['tl_content']['bbit_mod_art_container']
+	= array('Artikelcontainer ausgeben', 'Gibt zusätzlich den Artikelcontainer aus anstatt nur die Inhaltselemente des Artikels.');
