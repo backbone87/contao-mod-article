@@ -4,7 +4,7 @@ class ModuleIncludeMultiArticles extends Module {
 
 	protected $strArticles;
 
-	public function __construct(Database_Result $objModule, $strColumn = 'main') {
+	public function __construct($objModule, $strColumn = 'main') {
 		parent::__construct($objModule, $strColumn);
 	}
 
