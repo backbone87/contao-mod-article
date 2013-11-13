@@ -2,7 +2,7 @@
 
 class ContentIncludePageArticles extends ContentElement {
 
-	public function __construct(Database_Result $objElement) {
+	public function __construct($objElement) {
 		parent::__construct($objElement);
 	}
 

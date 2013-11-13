@@ -4,7 +4,7 @@ class ContentIncludeMultiArticles extends ContentElement {
 
 	protected $strArticles;
 
-	public function __construct(Database_Result $objElement) {
+	public function __construct($objElement) {
 		parent::__construct($objElement);
 	}
 
