@@ -8,7 +8,7 @@ class ModuleIncludePageArticles extends Module {
 
 	public function generate() {
 		return IncludeArticleUtils::generatePageArticles(
-			$this->bbit_mod_art_page,
+			$this->getPage(),
 			$this->bbit_mod_art_setColumns
 				? deserialize($this->bbit_mod_art_columns)
 				: $this->strColumn,
@@ -20,6 +20,10 @@ class ModuleIncludePageArticles extends Module {
 	}
 
 	protected function compile() {
+	}
+
+	public function getPage() {
+		return $this->bbit_mod_art_page;
 	}
 
 }
