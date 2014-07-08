@@ -4,7 +4,11 @@
 
 		$("container").addEvent("click", function(event) {
 			var a = $(event.target), id;
-			if(!a || !a.hasClass(CLS) && !(a = a.getParent("a." + CLS)) && a.hasClass(CLS)) return;
+			if(!a) return;
+			if(!a.hasClass(CLS)) {
+				a = a.getParent("a." + CLS);
+				if(!a || !a.hasClass(CLS)) return;
+			}
 
 			event.preventDefault();
 			id = a.getPrevious("select");
