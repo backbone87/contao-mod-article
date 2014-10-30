@@ -13,7 +13,9 @@ class IncludeArticleDCA extends Backend {
 				if(isset($arrPids[$intID]))
 					continue;
 				$arrPids[$intID] = true;
-				$arrPids = array_merge($arrPids, array_flip($this->getChildRecords($intID, 'tl_page', true)));
+				foreach($this->getChildRecords($intID, 'tl_page') as $pid) {
+					$arrPids[$pid] = true;
+				}
 			}
 
 			if(empty($arrPids))
