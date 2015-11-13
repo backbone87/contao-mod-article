@@ -1,38 +1,42 @@
 {
-	"name": "backboneit/contao-mod-article",
-	"description": "Various modules to display articles in a way so that problems that occur when using Insert-Tags are avoided.",
-	"keywords": [ "module", "content", "insert-tags", "article", "contao" ],
-	"type": "contao-module",
-	"license": "LGPL-3.0+",
-	"authors": [
-		{
-			"name": "Oliver Hoff",
-			"email": "oliver@hofff.com",
-			"homepage": "http://hofff.com/",
-			"role": "Developer"
+	"name" : "backboneit/contao-mod-article",
+	"description" : "Various modules to display articles in a way so that problems that occur when using Insert-Tags are avoided.",
+	"keywords" : [
+		"module",
+		"content",
+		"insert-tags",
+		"article",
+		"contao"
+	],
+	"type" : "contao-module",
+	"license" : "LGPL-3.0+",
+	"authors" : [{
+			"name" : "Oliver Hoff",
+			"email" : "oliver@hofff.com",
+			"homepage" : "http://hofff.com/",
+			"role" : "Developer"
 		}
 	],
-	"support": {
-		"issues": "https://github.com/backbone87/contao-mod-article/issues",
-		"forum": "https://community.contao.org/de/showthread.php?18873-backboneit_mod_article-Ein-Artikel-als-Modul-verwenden-ohne-InsertTag",
-		"irc": "irc://irc.freenode.org/contao.dev",
-		"source": "https://github.com/backbone87/contao-mod-article"
+	"support" : {
+		"issues" : "https://github.com/backbone87/contao-mod-article/issues",
+		"forum" : "https://community.contao.org/de/showthread.php?18873-backboneit_mod_article-Ein-Artikel-als-Modul-verwenden-ohne-InsertTag",
+		"irc" : "irc://irc.freenode.org/contao.dev",
+		"source" : "https://github.com/backbone87/contao-mod-article"
 	},
-	"require": {
-		"php": ">=5.3",
-		"contao/core": ">=2.11,<4",
-		"menatwork/contao-multicolumnwizard": ">=3.2-dev,<4"
+	"require" : {
+		"php" : ">=5.3",
+		"contao/core" : "~3.2",
+		"contao-community-alliance/composer-plugin" : "~2.0",
+		"menatwork/contao-multicolumnwizard" : "~3.2-dev"
 	},
-	"replace": {
-		"contao-legacy/backboneit_mod_article": "*"
+	"replace" : {
+		"contao-legacy/backboneit_mod_article" : "self.version"
 	},
-	"extra": {
-		"contao": {
-			"sources": {
-				"TL_ROOT/system/modules/backboneit_mod_article": "system/modules/backboneit_mod_article"
+	"extra" : {
+		"contao" : {
+			"sources" : {
+				"TL_ROOT/system/modules/backboneit_mod_article" : "system/modules/backboneit_mod_article"
 			}
-		},
-		"branch-alias": {
 		}
 	}
 }
