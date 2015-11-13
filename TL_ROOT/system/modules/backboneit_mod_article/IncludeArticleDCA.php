@@ -2,6 +2,27 @@
 
 class IncludeArticleDCA extends Backend {
 
+	public function hookIsVisibleElement($row, $visible) {
+		return $visible && !$row->bbit_mod_art_hide;
+	}
+
+	public function callbackLabelArticle($row, $label) {
+		$callback = $GLOBALS['TL_DCA']['tl_article']['list']['label']['label_callback_bbit_mod_art'];
+		$label = call_user_func_array(
+			array(static::importStatic($callback[0]), $callback[1]),
+			func_get_args()
+		);
+
+		if($row['bbit_mod_art_hide']) {
+			$label .= sprintf(
+				' <span style="color:#4b85ba;padding-left:3px">[%s]</span>',
+				$GLOBALS['TL_LANG']['tl_article']['bbit_mod_art_hide'][0]
+			);
+		}
+
+		return $label;
+	}
+
 	public function getArticles($objDC) {
 		$this->import('BackendUser', 'User');
 

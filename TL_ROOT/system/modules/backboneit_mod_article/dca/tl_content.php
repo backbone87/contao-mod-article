@@ -1,5 +1,7 @@
 <?php
 
+$GLOBALS['TL_DCA']['tl_content']['list']['sorting']['headerFields'][] = 'bbit_mod_art_hide';
+
 $GLOBALS['TL_DCA']['tl_content']['palettes']['bbit_mod_multiArt']
 	= '{type_legend},name,type'
 	. ';{bbit_mod_art_legend},bbit_mod_art_multi,bbit_mod_art_multiTemplate'
