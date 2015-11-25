@@ -76,14 +76,12 @@ class IncludeArticleDCA extends Backend {
 		if(!$objAlias->numRows)
 			return $arrAlias;
 
-		$this->loadLanguageFile('tl_article');
-
 		while($objAlias->next())
 			$arrAlias[$objAlias->parent][$objAlias->id] = sprintf(
 				'%s (%s, ID %s)',
 				$objAlias->title,
-				strlen($GLOBALS['TL_LANG']['tl_article'][$objAlias->inColumn])
-					? $GLOBALS['TL_LANG']['tl_article'][$objAlias->inColumn]
+				strlen($GLOBALS['TL_LANG']['COLS'][$objAlias->inColumn])
+					? $GLOBALS['TL_LANG']['COLS'][$objAlias->inColumn]
 					: $objAlias->inColumn,
 				$objAlias->id
 			);
