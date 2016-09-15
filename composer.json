@@ -1,42 +1,54 @@
 {
-	"name" : "backboneit/contao-mod-article",
-	"description" : "Various modules to display articles in a way so that problems that occur when using Insert-Tags are avoided.",
-	"keywords" : [
+	"name": "backboneit/contao-mod-article",
+	"description": "Various modules to display articles in a way so that problems that occur when using Insert-Tags are avoided.",
+	"keywords": [
 		"module",
 		"content",
 		"insert-tags",
 		"article",
 		"contao"
 	],
-	"type" : "contao-module",
-	"license" : "LGPL-3.0+",
-	"authors" : [{
-			"name" : "Oliver Hoff",
-			"email" : "oliver@hofff.com",
-			"homepage" : "http://hofff.com/",
-			"role" : "Developer"
+	"type": "contao-module",
+	"license": "LGPL-3.0+",
+	"homepage": "http://hofff.com/",
+	"authors": [
+		{
+			"name": "Oliver Hoff",
+			"email": "oliver@hofff.com",
+			"homepage": "http://hofff.com/",
+			"role": "Developer"
 		}
 	],
-	"support" : {
-		"issues" : "https://github.com/backbone87/contao-mod-article/issues",
-		"forum" : "https://community.contao.org/de/showthread.php?18873-backboneit_mod_article-Ein-Artikel-als-Modul-verwenden-ohne-InsertTag",
-		"irc" : "irc://irc.freenode.org/contao.dev",
-		"source" : "https://github.com/backbone87/contao-mod-article"
+	"support": {
+		"issues": "https://github.com/backbone87/contao-mod-article/issues",
+		"source": "https://github.com/backbone87/contao-mod-article"
 	},
-	"require" : {
-		"php" : ">=5.3",
-		"contao/core" : "~3.2",
-		"contao-community-alliance/composer-plugin" : "~2.0",
-		"menatwork/contao-multicolumnwizard" : "~3.2-dev"
+	"config": {
+		"preferred-install": "dist"
+	},
+	"require": {
+		"php": "^5.6 || ^7.0",
+		"contao/core": "^3.5",
+		"contao-community-alliance/composer-plugin": "^2.0",
+		"menatwork/contao-multicolumnwizard": "^3.2",
+		"hofff/contao-content": "^1.0"
 	},
 	"replace" : {
 		"contao-legacy/backboneit_mod_article" : "self.version"
 	},
+	"autoload": {
+		"psr-4": {
+			"BackboneIT\\Contao\\Article\\": "src/"
+		}
+	},
 	"extra" : {
 		"contao" : {
 			"sources" : {
-				"TL_ROOT/system/modules/backboneit_mod_article" : "system/modules/backboneit_mod_article"
-			}
+				"contao-module" : "system/modules/backboneit_mod_article"
+			},
+			"runonce": [
+				"runonce/01_update.php"
+			]
 		}
 	}
 }
