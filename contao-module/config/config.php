@@ -14,6 +14,3 @@ $GLOBALS['FE_MOD']['miscellaneous']['bbit_mod_multiArt']
 
 $GLOBALS['FE_MOD']['miscellaneous']['bbit_mod_pageArt']
 	= 'ModuleIncludePageArticles';
-
-$GLOBALS['TL_HOOKS']['isVisibleElement']['bbit_mod_art']
-	= array('IncludeArticleDCA', 'hookIsVisibleElement');
