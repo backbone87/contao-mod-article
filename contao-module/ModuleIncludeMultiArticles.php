@@ -1,5 +1,8 @@
 <?php
 
+/**
+ * @deprecated
+ */
 class ModuleIncludeMultiArticles extends Module {
 
 	protected $strArticles;

@@ -6,6 +6,7 @@ use Contao\Database;
 
 /**
  * @author Oliver Hoff <oliver@hofff.com>
+ * @deprecated
  */
 class Version2Update {
 

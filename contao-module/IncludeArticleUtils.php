@@ -1,5 +1,8 @@
 <?php
 
+/**
+ * @deprecated
+ */
 final class IncludeArticleUtils extends System {
 
 	const INDEXER_STOP		= '<!-- indexer::stop -->';

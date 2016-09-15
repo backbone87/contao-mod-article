@@ -4,6 +4,7 @@ namespace BackboneIT\Contao\Article\Frontend;
 
 /**
  * @author Oliver Hoff <oliver@hofff.com>
+ * @deprecated
  */
 trait LegacyTrait {
 

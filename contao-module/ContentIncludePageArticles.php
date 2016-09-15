@@ -1,5 +1,8 @@
 <?php
 
+/**
+ * @deprecated
+ */
 class ContentIncludePageArticles extends ContentElement {
 
 	public function __construct($objElement) {

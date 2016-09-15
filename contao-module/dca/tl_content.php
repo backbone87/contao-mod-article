@@ -1,5 +1,9 @@
 <?php
 
+/*
+ * @deprecated DO NOT REUSE THESE FIELDS ANYMORE
+ */
+
 $GLOBALS['TL_DCA']['tl_content']['palettes']['bbit_mod_multiArt']
 	= '{type_legend},name,type'
 	. ';{bbit_mod_art_legend},bbit_mod_art_multi,bbit_mod_art_multiTemplate'

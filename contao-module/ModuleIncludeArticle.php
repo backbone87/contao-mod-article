@@ -1,5 +1,8 @@
 <?php
 
+/**
+ * @deprecated
+ */
 class ModuleIncludeArticle extends Module {
 
 	public function __construct($objModule, $strColumn = 'main') {

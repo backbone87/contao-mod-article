@@ -1,5 +1,8 @@
 <?php
 
+/**
+ * @deprecated
+ */
 class IncludeArticleDCA extends Backend {
 
 	public function hookIsVisibleElement($row, $visible) {

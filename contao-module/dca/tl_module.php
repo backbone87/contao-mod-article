@@ -1,5 +1,9 @@
 <?php
 
+/*
+ * @deprecated DO NOT REUSE THESE FIELDS ANYMORE
+ */
+
 $GLOBALS['TL_DCA']['tl_module']['palettes']['__selector__'][] = 'bbit_mod_art_setColumns';
 
 $GLOBALS['TL_DCA']['tl_module']['palettes']['bbit_mod_art']

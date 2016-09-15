@@ -6,6 +6,7 @@ use Hofff\Contao\Content\Frontend\ModuleReferences;
 
 /**
  * @author Oliver Hoff <oliver@hofff.com>
+ * @deprecated
  */
 class ModuleLegacyReferences extends ModuleReferences {
 

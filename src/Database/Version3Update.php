@@ -7,6 +7,7 @@ use Contao\Database\Result;
 
 /**
  * @author Oliver Hoff <oliver@hofff.com>
+ * @deprecated
  */
 class Version3Update {
 
