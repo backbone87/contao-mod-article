@@ -114,7 +114,7 @@ final class IncludeArticleUtils extends System {
 		if(isset($GLOBALS['TL_HOOKS']['getArticle']) && is_array($GLOBALS['TL_HOOKS']['getArticle'])) {
 			foreach($GLOBALS['TL_HOOKS']['getArticle'] as $callback) {
 				$this->import($callback[0]);
-				$this->$callback[0]->$callback[1]($objArticle);
+				$this->{$callback[0]}->{$callback[1]}($objArticle);
 			}
 		}
 	}
